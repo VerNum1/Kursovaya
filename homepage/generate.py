@@ -1,9 +1,10 @@
 import random
-from study_site.homepage.models import *
+
+from homepage.models import *
 
 
 def __generate_sfc():
-    name = ['Bogdan', 'Matvey', 'Ivan', 'Eve', 'Juliana', 'Makar', 'Makar', 'Irina', 'Rostislav', 'Vasilisa']
+    name = ['Bogdan', 'Matvey', 'Ivan', 'Eve', 'Juliana', 'Makar', 'Irina', 'Rostislav', 'Vasilisa']
     return (name[random.randint(0, len(name) - 1)] + '.' + name[random.randint(0, len(name) - 1)][0] + '.' +
             name[random.randint(0, len(name) - 1)][0])
 
@@ -24,10 +25,10 @@ def __generate_homework():
 
 
 def __generate_datetime():
-    y = str(random.randint(2020, 2022))
+    y = str(random.randint(2020, 2024))
     mo = str(random.randint(1, 12))
     d = str(random.randint(1, 28))
-    h = str(random.randint(8, 21))
+    h = str(random.randint(8, 20))
     mi = str(random.randint(0, 59))
     s = str(random.randint(0, 59))
     if int(h) < 10:
@@ -49,7 +50,7 @@ def generate_customer(customer_id, cont_id):
     return Customers(id=customer_id, contact_id=cont_id)
 
 
-def generate_doctor(tutors_id, cont_id):
+def generate_tutor(tutors_id, cont_id):
     return Tutors(id=tutors_id, contact_id=cont_id, profession=__generate_prof())
 
 
