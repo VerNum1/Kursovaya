@@ -33,5 +33,5 @@ urlpatterns = [
     path("dwlpdf", download_pdf, name="dwlpdf"),
     path("dwlcsv", download_csv, name="dwlcsv"),
     path("new_tut", new_tutor, name="new_tut"),
-    path("change_homeworks/<int:id>", change_homeworks, name="change_homeworks")
+    path("change_homework/<int:id>", change_homework, name="change_homework")
 ]

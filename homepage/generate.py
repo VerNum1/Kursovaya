@@ -15,7 +15,7 @@ def __generate_address():
 
 
 def __generate_prof():
-    name = ['The mathematician', 'Linguist', 'Physicist', 'Informatics', 'Chemist', 'Biologist']
+    name = ['The mathematician', 'Linguist', 'Physicist', 'Informatics', 'Chemic', 'Biologist']
     return name[random.randint(0, len(name) - 1)]
 
 

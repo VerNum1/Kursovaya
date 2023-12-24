@@ -30,7 +30,7 @@
                     <td>{{i.meet_date}}</td>
                     <td>{{i.homework}}</td>
                     {%if perms.homepage.view_timetable%}
-                    <td><button><a href="{%url 'change_homeworks' i.id%}">Change</a></button></td>
+                    <td><button><a href="{%url 'change_homework' i.id%}">Change</a></button></td>
                     {%endif%}
                 </tr>
             {%endfor%}

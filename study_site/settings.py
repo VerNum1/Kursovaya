@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     'dbbackup',
     'django_celery_beat',
     'django_celery_results',
+    'sass_processor',
 ]
 
 DBBACKUP_STORAGE = 'django.core.files.storage.FileSystemStorage'

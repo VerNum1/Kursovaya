@@ -162,9 +162,9 @@ def download_pdf(request):
                             bottomMargin=60)
     elements = []
 
-    data = [['Customer', 'Tutor', 'Date&Time', 'homeworks']]
+    data = [['Customer', 'Tutor', 'Date&Time', 'homework']]
     for i in TT:
-        data.append([i.customer.contact_id.sfc, i.tutor.contact_id.sfc, i.meet_date, i.homeworks])
+        data.append([i.customer.contact_id.sfc, i.tutor.contact_id.sfc, i.meet_date, i.homework])
     t = Table(data)
     t.setStyle(TableStyle([('ALIGN', (1, 1), (-2, -2), 'RIGHT'),
                            ('TEXTCOLOR', (1, 1), (-2, -2), colors.red),
@@ -201,7 +201,7 @@ def download_csv(request):
 
     writer = csv.writer(response, delimiter=';')
     for i in TT:
-        writer.writerow([i.customer.contact_id.sfc, i.tutor.contact_id.sfc, i.meet_date, i.homeworks])
+        writer.writerow([i.customer.contact_id.sfc, i.tutor.contact_id.sfc, i.meet_date, i.homework])
 
     return response
 
@@ -237,14 +237,14 @@ def new_tutor(request):
     return render(request, 'homepage/new_tut.html', {'f': form})
 
 
-def change_homeworks(request, id):
+def change_homework(request, id):
     form = HomeForm()
 
     if request.method == 'POST':
         form = HomeForm(request.POST)
         if form.is_valid():
             newd = Timetable.objects.get(id=id)
-            newd.homeworks = form.cleaned_data.get('home')
+            newd.homework = form.cleaned_data.get('home')
             newd.save()
             return redirect('timetable')
 

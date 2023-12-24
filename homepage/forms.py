@@ -28,7 +28,7 @@ class AppointmentForm2(forms.Form):
     customer = forms.IntegerField()
     tutor = forms.IntegerField()
     meet_time = forms.DateTimeField()
-    homeworks = forms.CharField()
+    homework = forms.CharField()
 
 
 class AddTutProf(forms.Form):
