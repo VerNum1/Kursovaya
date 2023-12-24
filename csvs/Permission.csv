@@ -1,0 +1,77 @@
+group,user,id,name,content_type,codename
+NA,NA,1,Can add log entry,admin | запись в журнале,add_logentry
+NA,NA,2,Can change log entry,admin | запись в журнале,change_logentry
+NA,NA,3,Can delete log entry,admin | запись в журнале,delete_logentry
+NA,NA,4,Can view log entry,admin | запись в журнале,view_logentry
+NA,NA,9,Can add group,auth | группа,add_group
+NA,NA,10,Can change group,auth | группа,change_group
+NA,NA,11,Can delete group,auth | группа,delete_group
+NA,NA,12,Can view group,auth | группа,view_group
+NA,NA,5,Can add permission,auth | право,add_permission
+NA,NA,6,Can change permission,auth | право,change_permission
+NA,NA,7,Can delete permission,auth | право,delete_permission
+NA,NA,8,Can view permission,auth | право,view_permission
+NA,NA,13,Can add user,auth | пользователь,add_user
+NA,NA,14,Can change user,auth | пользователь,change_user
+NA,NA,15,Can delete user,auth | пользователь,delete_user
+NA,NA,16,Can view user,auth | пользователь,view_user
+NA,NA,17,Can add content type,contenttypes | тип содержимого,add_contenttype
+NA,NA,18,Can change content type,contenttypes | тип содержимого,change_contenttype
+NA,NA,19,Can delete content type,contenttypes | тип содержимого,delete_contenttype
+NA,NA,20,Can view content type,contenttypes | тип содержимого,view_contenttype
+NA,NA,57,Can add clocked,django_celery_beat | время,add_clockedschedule
+NA,NA,58,Can change clocked,django_celery_beat | время,change_clockedschedule
+NA,NA,59,Can delete clocked,django_celery_beat | время,delete_clockedschedule
+NA,NA,60,Can view clocked,django_celery_beat | время,view_clockedschedule
+NA,NA,37,Can add crontab,django_celery_beat | crontab,add_crontabschedule
+NA,NA,38,Can change crontab,django_celery_beat | crontab,change_crontabschedule
+NA,NA,39,Can delete crontab,django_celery_beat | crontab,delete_crontabschedule
+NA,NA,40,Can view crontab,django_celery_beat | crontab,view_crontabschedule
+NA,NA,41,Can add interval,django_celery_beat | интервал,add_intervalschedule
+NA,NA,42,Can change interval,django_celery_beat | интервал,change_intervalschedule
+NA,NA,43,Can delete interval,django_celery_beat | интервал,delete_intervalschedule
+NA,NA,44,Can view interval,django_celery_beat | интервал,view_intervalschedule
+NA,NA,45,Can add periodic task,django_celery_beat | периодическая задача,add_periodictask
+NA,NA,46,Can change periodic task,django_celery_beat | периодическая задача,change_periodictask
+NA,NA,47,Can delete periodic task,django_celery_beat | периодическая задача,delete_periodictask
+NA,NA,48,Can view periodic task,django_celery_beat | периодическая задача,view_periodictask
+NA,NA,49,Can add periodic tasks,django_celery_beat | periodic tasks,add_periodictasks
+NA,NA,50,Can change periodic tasks,django_celery_beat | periodic tasks,change_periodictasks
+NA,NA,51,Can delete periodic tasks,django_celery_beat | periodic tasks,delete_periodictasks
+NA,NA,52,Can view periodic tasks,django_celery_beat | periodic tasks,view_periodictasks
+NA,NA,53,Can add solar event,django_celery_beat | астрономическое событие,add_solarschedule
+NA,NA,54,Can change solar event,django_celery_beat | астрономическое событие,change_solarschedule
+NA,NA,55,Can delete solar event,django_celery_beat | астрономическое событие,delete_solarschedule
+NA,NA,56,Can view solar event,django_celery_beat | астрономическое событие,view_solarschedule
+NA,NA,29,Can add chord counter,django_celery_results | chord counter,add_chordcounter
+NA,NA,30,Can change chord counter,django_celery_results | chord counter,change_chordcounter
+NA,NA,31,Can delete chord counter,django_celery_results | chord counter,delete_chordcounter
+NA,NA,32,Can view chord counter,django_celery_results | chord counter,view_chordcounter
+NA,NA,33,Can add group result,django_celery_results | group result,add_groupresult
+NA,NA,34,Can change group result,django_celery_results | group result,change_groupresult
+NA,NA,35,Can delete group result,django_celery_results | group result,delete_groupresult
+NA,NA,36,Can view group result,django_celery_results | group result,view_groupresult
+NA,NA,25,Can add task result,django_celery_results | task result,add_taskresult
+NA,NA,26,Can change task result,django_celery_results | task result,change_taskresult
+NA,NA,27,Can delete task result,django_celery_results | task result,delete_taskresult
+NA,NA,28,Can view task result,django_celery_results | task result,view_taskresult
+NA,NA,61,Can add Контакт,homepage | Контакт,add_contact
+NA,NA,62,Can change Контакт,homepage | Контакт,change_contact
+NA,NA,63,Can delete Контакт,homepage | Контакт,delete_contact
+NA,NA,64,Can view Контакт,homepage | Контакт,view_contact
+NA,NA,65,Can add Ученик,homepage | Ученик,add_customers
+NA,NA,66,Can change Ученик,homepage | Ученик,change_customers
+NA,NA,67,Can delete Ученик,homepage | Ученик,delete_customers
+NA,NA,68,Can view Ученик,homepage | Ученик,view_customers
+NA,NA,73,Can add Запись,homepage | Запись,add_timetable
+NA,NA,74,Can change Запись,homepage | Запись,change_timetable
+NA,NA,75,Can delete Запись,homepage | Запись,delete_timetable
+NA,NA,76,Can view Запись,homepage | Запись,view_timetable
+NA,NA,69,Can add Репетитор,homepage | Репетитор,add_tutors
+NA,NA,70,Can change Репетитор,homepage | Репетитор,change_tutors
+NA,NA,71,Can delete Репетитор,homepage | Репетитор,delete_tutors
+NA,NA,72,Can view Репетитор,homepage | Репетитор,view_tutors
+NA,NA,21,Can add session,sessions | сессия,add_session
+NA,NA,22,Can change session,sessions | сессия,change_session
+NA,NA,23,Can delete session,sessions | сессия,delete_session
+NA,NA,24,Can view session,sessions | сессия,view_session

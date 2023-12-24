@@ -1,0 +1,9 @@
+logentry,contact,id,password,last_login,is_superuser,username,first_name,last_name,email,is_staff,is_active,date_joined,groups,user_permissions
+NA,NA,1,pbkdf2_sha256$600000$EtvkIrofFbpagULb69WlFh$iJSKqTg5deywnd0Rq9CUStvRSpm1dWHwBHhZ4bbYYrw=,2023-12-23 19:28:55.754937+00:00,False,1vernum1,vadim,,,False,True,2023-12-23 19:28:41.753002+00:00,auth.Group.None,auth.Permission.None
+NA,NA,3,pbkdf2_sha256$600000$x8A85Hoc2Z9g75ciAjXlGE$7HP90pPaPAMGgfWgRmaZTpON0zVNHVhFaTN0rlakcns=,None,False,Lidia,,,,False,True,2023-12-24 11:11:43.493789+00:00,auth.Group.None,auth.Permission.None
+NA,NA,4,pbkdf2_sha256$600000$TkwkavkCi7XkwgBM6gAUxh$pBMvpP3E8S1K0H/BlJbimhQt25vZvAl8zs2/YLO9Zkw=,None,False,Roman,,,,False,True,2023-12-24 11:13:17.769068+00:00,auth.Group.None,auth.Permission.None
+NA,NA,5,pbkdf2_sha256$600000$CD3GrPXLHlnXxcUNiYP4Vr$phim4JsHw7+PtIZvEIR67fd5ybmuc2pfWmKuh/zYVuk=,None,False,Anastasia,,,,False,True,2023-12-24 11:14:11.526160+00:00,auth.Group.None,auth.Permission.None
+NA,NA,6,pbkdf2_sha256$600000$0NW0MpUQi4EaOVFf5yk24G$u8OqqIpQtxPYLhFcR7zhIOmmOCQFXVvfXQTxgngPbk8=,None,False,Elizabeth,,,,False,True,2023-12-24 11:14:53.950668+00:00,auth.Group.None,auth.Permission.None
+NA,NA,7,pbkdf2_sha256$600000$lXYhxqcgzDwkbcm0dBo6Zw$Pr7mXLJ9QDTKnU9Wo9JZeLrfVRpuid+F4cFa0LTQcMA=,2023-12-24 11:16:16.581564+00:00,False,Nikolay,Nikolay,,,False,True,2023-12-24 11:16:02.827109+00:00,auth.Group.None,auth.Permission.None
+NA,NA,2,pbkdf2_sha256$600000$4gBFGYRWq1sxIUXx2CQbr5$c8mj9EDIUVhAUcrIMz2jjrueKLSxHpaVua8A5kVKAFA=,2023-12-24 15:25:02.718853+00:00,True,vadim,,,vadim.yartsev1@mail.ru,True,True,2023-12-24 10:47:17.160573+00:00,auth.Group.None,auth.Permission.None
+NA,NA,9,pbkdf2_sha256$600000$nTqPJ52POzCJY4QEbv8QpZ$O7x04+C7zQWjWqqQI1eTT8sHRnKuLYA184XqdYd9BqY=,2023-12-24 15:29:39.834793+00:00,False,Nikola,nik,,,False,True,2023-12-24 14:52:37.234537+00:00,auth.Group.None,auth.Permission.None

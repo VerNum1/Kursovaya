@@ -1,0 +1,1 @@
+id,task_id,periodic_task_name,task_name,task_args,task_kwargs,status,worker,content_type,content_encoding,result,date_created,date_done,traceback,meta

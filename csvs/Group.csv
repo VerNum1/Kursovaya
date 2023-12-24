@@ -1,0 +1,2 @@
+user,id,name,permissions
+NA,1,group1,auth.Permission.None

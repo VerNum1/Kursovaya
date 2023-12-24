@@ -1,0 +1,10 @@
+customers,tutors,id,sfc,phone_num,address,user
+NA,NA,1,vadim,8999999999,Belgorod,1vernum1
+NA,NA,2,Anatoly,89991232112,Belgorod,1vernum1
+NA,NA,3,vadim,89991232112,Belgorod,vadim
+NA,NA,4,tutor1,89991232132,Belgorod,Lidia
+NA,NA,5,tutor2,89123215476,Belgorod,Roman
+NA,NA,6,tutor3,89998723354,Belgorod,Anastasia
+NA,NA,7,tutor4,89998723312,Belgorod,Elizabeth
+NA,NA,8,Nikolay,89991232111,Belgorod,Nikolay
+NA,NA,9,nik,89991232115,Belgorod,Nikola

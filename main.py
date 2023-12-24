@@ -1,96 +1,53 @@
-import sass
+import yadisk
+import os
+from datetime import datetime
 
-# Sass Code
-sass_code = '''
-$u: 1.25;
-$d: 14em;
-$p: .5em;
-$o: 1.25em;
-$l: 6px;
+PROJECT_NAME = 'study_site'
 
-@import url('https://fonts.googleapis.com/css?family=Montserrat:400,800');
 
-*, ::before { box-sizing: inherit; margin: 0 }
+def main():
+    from django.apps import apps
+    import csv
 
-html {
-	font: 100 #{$u*1em}/ 1.25 handlee,
-		z003, segoe script, comic sans ms, cursive;
+    model_list = apps.get_models()
+    model_name_list = [x.__name__ for x in model_list]
 
-	@media (max-width: 360px) { font-size: 1em }
-	@media (max-width: 240px) { font-size: .75em }
-}
+    for model in model_list:
+        all_fields = model._meta.get_fields()
+        columns = [x.name for x in all_fields]
 
-body {
-	box-sizing: border-box;
-	display: grid;
-	grid-gap: $o;
-	grid-template-columns:
-		repeat(auto-fit, minmax($d, 1fr));
-	overflow-x: hidden;
-	padding: $p;
-	min-height: 100vh;
-	background:
-		linear-gradient(var(--ang, 185deg),
-				#3f44cc calc(50% - .5px), #fff calc(50% + .5px));
+        if not os.path.exists('csvs'):
+            os.makedirs('csvs')
 
-	@media (min-width: $u*(2*$d + 2*$p + $o)) { --ang: 85deg }
-}
+        with open(f'csvs/{model.__name__}.csv', mode='w') as csv_file:
+            writer = csv.writer(csv_file, delimiter=',', quotechar='"', quoting=csv.QUOTE_MINIMAL)
 
-article {
-	--c: #{mix(#fff, darkorange, 25%)};
-	--s0: calc(#{$o} + #{$l});
-	--s1: calc(#{$o} + #{$l} + #{$p});
-	place-self: center;
-	position: relative;
-	width: $d; height: $d;
-	border: solid 0 transparent;
-	border-width: 0 var(--s0) var(--s0) 0;
-	padding: var(--s1) $p $p var(--s1);
-	background: var(--c) padding-box;
+            # Writing column names
+            writer.writerow(columns)
 
-	&:nth-child(2) {
-		--c: #{invert(indigo)};
-		filter: invert(1)
-	}
+            objects = model.objects.all()
 
-	&::before {
-		position: absolute;
-		top: 0; left: 0;
-		border: inherit;
-		border-width: $o 0 0 $o;
-		width: $d; height: $d;
-		box-shadow: inset 0 0 0 $l var(--c);
-		mix-blend-mode: difference;
-		pointer-events: none;
-		content: ''
-	}
-}
+            for obj in objects:
+                row = [str(getattr(obj, field_name, "NA")) for field_name in columns]
+                writer.writerow(row)
 
-h3 {
-	font-size: 1.5em;
-	font-weight: 900;
-	line-height: 1.75
-}
 
-.vars {
-    width: 80vw;
-	height: 100px;
-	border: 3px solid;
-	border-radius: 10px;
-	margin: 0 auto;
-	text-align: center;
-	font-size: 50px;
-	font-family: 'Montserrat', sans-serif;
-	text-decoration: none;
-	background: linear-gradient(to bottom left, #d913ebb7, #d913eb00);
-}
+y = yadisk.YaDisk(token="y0_AgAAAABfpo5pAAsJ8QAAAAD1zmkh9I1DQVIDRK-qXQKLBFhIBxndd74")
 
-.vars2 {
-    text-decoration: none;
-    color: #706C6CFF
-}
-'''
 
-scss_to_css = sass.compile(string=sass_code, output_style='compressed')
+def run(path):
+    date = datetime.strftime(datetime.now(), "%d.%m.%Y-%H.%M.%S")
+    y.mkdir(f'/{date}')
 
-print(scss_to_css)
+    for dirs in os.walk(path):
+        y.mkdir(f'/{date}/{dir}')
+        print(f'Папка {dir} создана')
+        y.upload(f'{date}/{dirs}', f'/{date}/{dirs}')
+
+
+if __name__ == '__main__':
+    os.environ.setdefault('DJANGO_SETTINGS_MODULE', '%s.settings' % PROJECT_NAME)
+    import django
+    django.setup()
+    main()
+    run(r'C:\User\vadim\PycharmProject\Kursovaya\backup')
